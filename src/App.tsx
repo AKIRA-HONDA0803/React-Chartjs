@@ -11,13 +11,15 @@ import {
   Title,
   Tooltip,
   Legend,
+  ArcElement
   } from 'chart.js';
-  
+import PiePlot from './components/PiePlot';
   ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
+  ArcElement,
   Title,
   Tooltip,
   Legend
@@ -27,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <LinePlot />
+      <PiePlot />
     </div>
   );
 }
