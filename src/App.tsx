@@ -1,4 +1,5 @@
 import React from 'react';
+import Chart from 'chart.js/auto';
 import logo from './logo.svg';
 import './App.css';
 import LinePlot from './components/LinePlot';
@@ -14,6 +15,7 @@ import {
   ArcElement
   } from 'chart.js';
 import PiePlot from './components/PiePlot';
+import BarPlot from './components/BarPlot';
   ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -30,6 +32,7 @@ function App() {
     <div className="App">
       <LinePlot />
       <PiePlot />
+      <BarPlot />
     </div>
   );
 }
