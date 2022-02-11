@@ -1,5 +1,5 @@
 import React from 'react';
-import Chart from 'chart.js/auto';
+import { Chart, registerables } from 'chart.js';
 import logo from './logo.svg';
 import './App.css';
 import LinePlot from './components/LinePlot';
@@ -16,16 +16,8 @@ import {
   } from 'chart.js';
 import PiePlot from './components/PiePlot';
 import BarPlot from './components/BarPlot';
-  ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend
-  );
+import RadarPlot from './components/RadarPlot';
+Chart.register(...registerables);
 
 function App() {
   return (
@@ -33,6 +25,7 @@ function App() {
       <LinePlot />
       <PiePlot />
       <BarPlot />
+      <RadarPlot />
     </div>
   );
 }
